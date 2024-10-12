@@ -5,6 +5,8 @@ import CrearView from '../views/CrearView.vue'
 import EditarView from '../views/EditarView.vue'
 import PacienteView from '../views/PacienteView.vue'
 import EspecialistaView from '../views/EspecialistaView.vue'
+import ResultadosView from '../views/ResultadosView.vue'
+
 
 
 
@@ -28,7 +30,7 @@ const routes = [
     component: CrearView
   },
   {
-    path: '/editar',
+    path: '/editar/:id',
     name: 'editar',
     component: EditarView
   },
@@ -50,6 +52,11 @@ const routes = [
     path: '/especialista',
     name: 'especialista',
     component: EspecialistaView
+  },
+  {
+    path: '/resultados/:id',
+    name: 'resultados',
+    component: ResultadosView
   }
 ]
 

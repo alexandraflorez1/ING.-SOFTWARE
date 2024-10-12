@@ -80,7 +80,7 @@ export default {
     // Buscar un paciente por documento
     BuscarPaciente(doc) {
       console.log(doc);
-      fetch('http://localhost:8081/API/?consultar=' + doc) 
+      fetch('http://localhost:8081/API/?consultarDoc=' + doc) 
         .then(response => response.json())
         .then((data) => {
           if (data.length > 0) {

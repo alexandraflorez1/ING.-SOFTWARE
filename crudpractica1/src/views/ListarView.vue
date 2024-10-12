@@ -138,7 +138,7 @@ export default {
 
     methods:{
       consultarPacientes(){
-         fetch('http://localhost/API/')
+         fetch('http://localhost:8081/API/')
         .then(response => response.json())
         .then((data)=>{
           console.log(data)
@@ -153,7 +153,7 @@ export default {
 
       eliminarPaciente(id){
         console.log(id);
-        fetch('http://localhost/API/?borrar='+id)
+        fetch('http://localhost:8081/API/?borrar='+id)
           .then(response=>response.json())
           .then((data)=>{
             console.log(data)
@@ -164,7 +164,7 @@ export default {
 
     BuscarPaciente(doc) {
       console.log(doc);
-      fetch('http://localhost/API/?consultarDoc='+doc) //se hace uso de la API para consultar un paciente por numero de documento
+      fetch('http://localhost:8081/API/?consultarDoc='+doc) //se hace uso de la API para consultar un paciente por numero de documento
       .then(response=>response.json())
       .then((data) => {
         if(typeof data[0].sucess==='undefined'){
